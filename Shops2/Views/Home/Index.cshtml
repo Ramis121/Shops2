@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Shops2.Model.Phone>
+@{
+    ViewData["Title"] = "Список телефонов";
+}
+
+<html>
+<head>
+    <title>Магазин телефонов</title>
+</head>
+
+<body>
+    <h3>Смартфоны</h3>
+    <table>
+        <tr>
+            <td>Model</td>
+            <td>Company</td>
+            <td>Price</td>
+            <td></td>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.name</td>
+                <td>@item.company</td>
+                <td>@item.price</td>
+                <td><a href="~/Home/Buy/@item.id">Купить</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+
+
